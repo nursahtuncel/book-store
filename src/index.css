@@ -384,6 +384,7 @@ li {
 .category-container {
   padding: 20px;
   max-width:300px;
+  min-width: 300px;
   width: 100%;
 background-color: transparent;
   border-radius: 12px;
@@ -542,6 +543,11 @@ background-color: transparent;
 }
 
 @media (max-width: 768px) {
+  .category{
+    flex-direction: column;
+    align-items: center;
+    
+  }
   .detail-container {
     flex-direction: column;
     align-items: center;
@@ -604,3 +610,13 @@ background-color: transparent;
   border-color: #5F9EA0;
   box-shadow: 0 0 5px rgba(95, 158, 160, 0.5);
 }
+
+/* category content  */
+.category-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+}
+    

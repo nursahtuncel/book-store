@@ -9,7 +9,7 @@
       "page": 432,
       "description": "Bir adamın geçmişe yolculuğu ve hatıralarını yeniden keşfetme çabası.",
       "price": 89.9,
-      "category": "roman"
+      "category": "crime"
     },
     {
       "id": "2",
@@ -20,7 +20,7 @@
       "page": 276,
       "description": "Küçük bir kasabada büyüyen bir çocuğun gözünden dünyayı anlatan dokunaklı bir hikâye.",
       "price": 64.5,
-      "category": "hikaye"
+      "category": "romance"
     },
     {
       "id": "3",
@@ -31,7 +31,7 @@
       "page": 312,
       "description": "Bir savaşın gölgesinde geçen sürükleyici ve duygusal bir anlatı.",
       "price": 74.9,
-      "category": "roman"
+      "category": "fiction"
     },
     {
       "id": "4",

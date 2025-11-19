@@ -22,14 +22,14 @@ const Books = () => {
       _sort: "title",
       _order: sort === "a-z" ? "asc" : "desc",
     };
-
-    console.log(api.get("/books", { params }));
-
     api
-      .get("/books", { params })
+      .get("/books")
       .then((res) => {
-        console.log("API cevabı:", res.data);
-        setBooks(res.data);
+        const data =
+          params._order === "asc"
+            ? res.data.sort((a, b) => a.title.localeCompare(b.title))
+            : res.data.sort((a, b) => b.title.localeCompare(a.title));
+        setBooks(data);
       })
       .catch((err) => {
         console.error("API hatası:", err);

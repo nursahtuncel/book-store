@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Loading from "../components/Loading"
 import Error from "../components/Error"
 import BookCart from "../components/BookCart"
-const Novel = () => {
+const Crime = () => {
    const [loading, setLoading] = useState(true)
    const [error, setError] = useState(null)
     const [novel, setNovel] = useState([])
@@ -13,7 +13,7 @@ const Novel = () => {
     api.get("/books")
     .then((res) => {
       setLoading(false)
-      const novel = res.data.filter((book) => book.category === "roman")
+      const novel = res.data.filter((book) => book.category === "crime")
         setNovel(novel)
     })
     .catch((err) => {
@@ -29,7 +29,7 @@ const Novel = () => {
         ) : error ? (
             <Error />
         ) : novel.length === 0 ? (
-            <p>No novels found</p>
+            <p>No crime found</p>
         ) : (
         novel.map((book) => (
            <BookCart key={book.id} book={book} />
@@ -39,4 +39,4 @@ const Novel = () => {
   )
 }
 
-export default Novel
+export default Crime
