@@ -3,6 +3,9 @@
 Bu proje, **React** ve **React Router DOM** kullanılarak geliştirilmiş basit ama işlevsel bir **kitap alışveriş uygulamasıdır**. Kullanıcılar kitapları inceleyebilir, sepete ekleyebilir, sepetten çıkarabilir ve alışverişi tamamlayabilir.
 
 ---
+🌐 Live Demo
+👉 [Projeyi Canlı Görüntüle](https://cool-sunburst-d53dd9.netlify.app/)
+
 
 ## 🚀 Özellikler
 
