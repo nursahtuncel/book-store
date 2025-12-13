@@ -18,30 +18,31 @@ const Books = () => {
 const isCategoryPage = location.pathname.startsWith("/category");
 
   const sort = searchParams.get("sort");
+useEffect(() => {
+  setLoading(true);
+  setError(null);
 
-  useEffect(() => {
-    setLoading(true);
-    setError(null);
+  fetch("/data/books.json")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("JSON okunamadı");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      const sortedData =
+        sort === "a-z"
+          ? [...data].sort((a, b) => a.title.localeCompare(b.title))
+          : [...data].sort((a, b) => b.title.localeCompare(a.title));
 
-    const params = {
-      _sort: "title",
-      _order: sort === "a-z" ? "asc" : "desc",
-    };
-    api
-      .get("/books")
-      .then((res) => {
-        const data =
-          params._order === "asc"
-            ? res.data.sort((a, b) => a.title.localeCompare(b.title))
-            : res.data.sort((a, b) => b.title.localeCompare(a.title));
-        setBooks(data);
-      })
-      .catch((err) => {
-        console.error("API hatası:", err);
-        setError(err);
-      })
-      .finally(() => setLoading(false));
-  }, [sort]);
+      setBooks(sortedData);
+    })
+    .catch((err) => {
+      console.error("Veri hatası:", err);
+      setError(err);
+    })
+    .finally(() => setLoading(false));
+}, [sort]);
 
   if (loading) return <Loading />;
   if (error) return <NotFound />;
