@@ -12,7 +12,7 @@ import Cart from "./pages/cart.jsx";
 import Contact from "./pages/contact.jsx";
 import Detail from "./components/Detail.jsx";
 import NotFound from "./components/NotFound.jsx";
-import Category from "./pages/Category.jsx";
+import Category from "./pages/category.jsx";
 import CategoryContent from "./components/CategoryContent.jsx";
 
 createRoot(document.getElementById("root")).render(
