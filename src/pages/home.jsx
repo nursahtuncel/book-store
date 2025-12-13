@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Example from "../components/example";
 
 const Home = () => {
   return (
     <section className="home">
       <div className="hero">
+    
+      <Example/>
         <h1>Welcome to BookStore</h1>
         <p>
           Discover your next favorite book! From timeless classics to modern

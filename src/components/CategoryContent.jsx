@@ -1,37 +1,37 @@
 import React from "react"
 import api from "../api"
 import { useEffect, useState } from "react"
-import Loading from "../components/Loading"
-import Error from "../components/Error"
-import BookCart from "../components/BookCart"
-const Novel = () => {
+import Loading from "./Loading"
+import Error from "./Error"
+import BookCart from "./BookCart"
+const CategoryContent = ({category}) => {
    const [loading, setLoading] = useState(true)
    const [error, setError] = useState(null)
-    const [novel, setNovel] = useState([])
+    const [categoryContent, setCategoryContent] = useState([])
 
     useEffect(() => {
     api.get("/books")
     .then((res) => {
       setLoading(false)
-      const novel = res.data.filter((book) => book.category === "roman")
-        setNovel(novel)
+      const categoryContent = res.data.filter((book) => book.category === category)
+        setCategoryContent(categoryContent)
     })
     .catch((err) => {
       setLoading(false)
       setError(err)
     })
     .finally(() => setLoading(false))
-    }, [setNovel])    
+    }, [setCategoryContent, category])    
   return (
     <div className="category-content">
         {loading ? (
           <Loading />
         ) : error ? (
-            <Error />
-        ) : novel.length === 0 ? (
-            <p>No novels found</p>
+            <Error />   
+        ) : categoryContent.length === 0 ? (
+            <p>No {category} found</p>
         ) : (
-        novel.map((book) => (
+        categoryContent.map((book) => (
            <BookCart key={book.id} book={book} />
         ))
         )}
@@ -39,4 +39,4 @@ const Novel = () => {
   )
 }
 
-export default Novel
+export default CategoryContent;

@@ -5,6 +5,18 @@ import Loading from "./Loading";
 import Error from "./Error";
 
 const Detail = () => {
+   
+ const handleLocalStorage = () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const isBookInCart = cart.some((book) => book.id === id);
+    if (isBookInCart) {
+      alert("Book already in cart!");
+    } else {
+      localStorage.setItem("cart", JSON.stringify([...cart, book]));
+    }
+    return isBookInCart;
+  };
+
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -52,7 +64,7 @@ const Detail = () => {
           </div>
           <p className="detail-book-description">{book.description}</p>
           <h2 className="detail-book-price">Price: {book.price} ₺</h2>
-          <NavLink to="/cart" className="detail-add-cart-btn">Add to Cart</NavLink>
+          <NavLink to="/cart" className="detail-add-cart-btn" onClick={handleLocalStorage}>Add to Cart</NavLink>
         </div>
       </div>
     </div>

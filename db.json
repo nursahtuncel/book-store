@@ -42,7 +42,7 @@
       "page": 198,
       "description": "Zamanın insanlar üzerindeki etkisini anlatan kısa ama derinlikli öyküler.",
       "price": 59.95,
-      "category": "hikaye"
+      "category": "story"
     },
     {
       "id": "5",
@@ -53,7 +53,7 @@
       "page": 385,
       "description": "Hayallerinin peşinden koşan bir gencin ilham verici serüveni.",
       "price": 79.0,
-      "category": "roman"
+      "category": "novel"
     },
     {
       "id": "6",
@@ -64,7 +64,7 @@
       "page": 245,
       "description": "Toplumun görmezden geldiği hayatların iç dünyasına bir pencere.",
       "price": 68.25,
-      "category": "roman"
+      "category": "novel"
     },
     {
       "id": "7",
@@ -75,7 +75,7 @@
       "page": 330,
       "description": "Zamanla yarışan bir aşkın ve pişmanlıkların hikâyesi.",
       "price": 72.4,
-      "category": "roman"
+      "category": "story"
     },
     {
       "id": "8",
@@ -86,7 +86,7 @@
       "page": 154,
       "description": "Hayatın küçük detaylarını anlatan kısa hikâyeler koleksiyonu.",
       "price": 51.9,
-      "category": "hikaye"
+      "category": "story"
     },
     {
       "id": "9",
@@ -97,7 +97,7 @@
       "page": 288,
       "description": "Doğayla iç içe bir yaşamın insan ruhuna etkileri.",
       "price": 69.0,
-      "category": "roman"
+      "category": "story"
     },
     {
       "id": "10",
@@ -108,7 +108,7 @@
       "page": 223,
       "description": "Umut dolu öykülerle karanlık dönemlerin içinden çıkış yolları.",
       "price": 63.5,
-      "category": "hikaye"
+      "category": "story"
     }
   ]
 }
