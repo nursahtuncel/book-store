@@ -31,5 +31,6 @@ Bu proje, **React** ve **React Router DOM** kullanılarak geliştirilmiş basit 
 
 ```bash
 npm install
+npm run server
 npm run dev
 ``
